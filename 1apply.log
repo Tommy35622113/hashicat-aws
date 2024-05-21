@@ -1,0 +1,1425 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # aws_eip.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_eip" "hashicat" {
+      [32m+[0m [0m[1m[0mallocation_id[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0massociation_id[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mcarrier_ip[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mcustomer_owned_ip[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mdomain[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0minstance[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_border_group[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_dns[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_dns[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ipv4_pool[0m[0m     = (known after apply)
+      [32m+[0m [0m[1m[0mtags_all[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mvpc[0m[0m                  = true
+    }
+
+[1m  # aws_eip_association.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_eip_association" "hashicat" {
+      [32m+[0m [0m[1m[0mallocation_id[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0minstance_id[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip_address[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m            = (known after apply)
+    }
+
+[1m  # aws_instance.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_instance" "hashicat" {
+      [32m+[0m [0m[1m[0mami[0m[0m                                  = "ami-012485deee5681dc0"
+      [32m+[0m [0m[1m[0marn[0m[0m                                  = (known after apply)
+      [32m+[0m [0m[1m[0massociate_public_ip_address[0m[0m          = true
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_core_count[0m[0m                       = (known after apply)
+      [32m+[0m [0m[1m[0mcpu_threads_per_core[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mget_password_data[0m[0m                    = false
+      [32m+[0m [0m[1m[0mhost_id[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                                   = (known after apply)
+      [32m+[0m [0m[1m[0minstance_initiated_shutdown_behavior[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0minstance_state[0m[0m                       = (known after apply)
+      [32m+[0m [0m[1m[0minstance_type[0m[0m                        = "t2.micro"
+      [32m+[0m [0m[1m[0mipv6_address_count[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_addresses[0m[0m                       = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m                             = "tommytsang-ssh-key.pem"
+      [32m+[0m [0m[1m[0moutpost_arn[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0mpassword_data[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mplacement_group[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0mprimary_network_interface_id[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_dns[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_ip[0m[0m                           = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_dns[0m[0m                           = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_ip[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0msecondary_private_ips[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0msecurity_groups[0m[0m                      = (known after apply)
+      [32m+[0m [0m[1m[0msource_dest_check[0m[0m                    = true
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                                 = {
+          [32m+[0m [0m"Name" = "tommytsang-hashicat-instance"
+        }
+      [32m+[0m [0m[1m[0mtags_all[0m[0m                             = {
+          [32m+[0m [0m"Name" = "tommytsang-hashicat-instance"
+        }
+      [32m+[0m [0m[1m[0mtenancy[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mvpc_security_group_ids[0m[0m               = (known after apply)
+
+      [32m+[0m [0mcapacity_reservation_specification {
+          [32m+[0m [0m[1m[0mcapacity_reservation_preference[0m[0m = (known after apply)
+
+          [32m+[0m [0mcapacity_reservation_target {
+              [32m+[0m [0m[1m[0mcapacity_reservation_id[0m[0m = (known after apply)
+            }
+        }
+
+      [32m+[0m [0mebs_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0msnapshot_id[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mtags[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mthroughput[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+
+      [32m+[0m [0menclave_options {
+          [32m+[0m [0m[1m[0menabled[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mephemeral_block_device {
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m  = (known after apply)
+          [32m+[0m [0m[1m[0mno_device[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mvirtual_name[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mmetadata_options {
+          [32m+[0m [0m[1m[0mhttp_endpoint[0m[0m               = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_put_response_hop_limit[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mhttp_tokens[0m[0m                 = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_interface {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_index[0m[0m          = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_interface_id[0m[0m  = (known after apply)
+        }
+
+      [32m+[0m [0mroot_block_device {
+          [32m+[0m [0m[1m[0mdelete_on_termination[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mdevice_name[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mencrypted[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0miops[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mkms_key_id[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mtags[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0mthroughput[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_id[0m[0m             = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_size[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mvolume_type[0m[0m           = (known after apply)
+        }
+    }
+
+[1m  # aws_internet_gateway.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_internet_gateway" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mowner_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m     = {
+          [32m+[0m [0m"Name" = "tommytsang-internet-gateway"
+        }
+      [32m+[0m [0m[1m[0mtags_all[0m[0m = {
+          [32m+[0m [0m"Name" = "tommytsang-internet-gateway"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m   = (known after apply)
+    }
+
+[1m  # aws_key_pair.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_key_pair" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mfingerprint[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m          = (known after apply)
+      [32m+[0m [0m[1m[0mkey_name[0m[0m    = "tommytsang-ssh-key.pem"
+      [32m+[0m [0m[1m[0mkey_pair_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mtags_all[0m[0m    = (known after apply)
+    }
+
+[1m  # aws_route_table.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_route_table" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mowner_id[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mpropagating_vgws[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mroute[0m[0m            = [
+          [32m+[0m [0m{
+              [32m+[0m [0mcarrier_gateway_id         = ""
+              [32m+[0m [0mcidr_block                 = "0.0.0.0/0"
+              [32m+[0m [0mdestination_prefix_list_id = ""
+              [32m+[0m [0megress_only_gateway_id     = ""
+              [32m+[0m [0mgateway_id                 = (known after apply)
+              [32m+[0m [0minstance_id                = ""
+              [32m+[0m [0mipv6_cidr_block            = ""
+              [32m+[0m [0mlocal_gateway_id           = ""
+              [32m+[0m [0mnat_gateway_id             = ""
+              [32m+[0m [0mnetwork_interface_id       = ""
+              [32m+[0m [0mtransit_gateway_id         = ""
+              [32m+[0m [0mvpc_endpoint_id            = ""
+              [32m+[0m [0mvpc_peering_connection_id  = ""
+            },
+        ]
+      [32m+[0m [0m[1m[0mtags_all[0m[0m         = (known after apply)
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m           = (known after apply)
+    }
+
+[1m  # aws_route_table_association.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_route_table_association" "hashicat" {
+      [32m+[0m [0m[1m[0mid[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mroute_table_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m      = (known after apply)
+    }
+
+[1m  # aws_security_group.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_security_group" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mdescription[0m[0m            = "Managed by Terraform"
+      [32m+[0m [0m[1m[0megress[0m[0m                 = [
+          [32m+[0m [0m{
+              [32m+[0m [0mcidr_blocks      = [
+                  [32m+[0m [0m"0.0.0.0/0",
+                ]
+              [32m+[0m [0mdescription      = ""
+              [32m+[0m [0mfrom_port        = 0
+              [32m+[0m [0mipv6_cidr_blocks = []
+              [32m+[0m [0mprefix_list_ids  = []
+              [32m+[0m [0mprotocol         = "-1"
+              [32m+[0m [0msecurity_groups  = []
+              [32m+[0m [0mself             = false
+              [32m+[0m [0mto_port          = 0
+            },
+        ]
+      [32m+[0m [0m[1m[0mid[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mingress[0m[0m                = [
+          [32m+[0m [0m{
+              [32m+[0m [0mcidr_blocks      = [
+                  [32m+[0m [0m"0.0.0.0/0",
+                ]
+              [32m+[0m [0mdescription      = ""
+              [32m+[0m [0mfrom_port        = 22
+              [32m+[0m [0mipv6_cidr_blocks = []
+              [32m+[0m [0mprefix_list_ids  = []
+              [32m+[0m [0mprotocol         = "tcp"
+              [32m+[0m [0msecurity_groups  = []
+              [32m+[0m [0mself             = false
+              [32m+[0m [0mto_port          = 22
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0mcidr_blocks      = [
+                  [32m+[0m [0m"0.0.0.0/0",
+                ]
+              [32m+[0m [0mdescription      = ""
+              [32m+[0m [0mfrom_port        = 443
+              [32m+[0m [0mipv6_cidr_blocks = []
+              [32m+[0m [0mprefix_list_ids  = []
+              [32m+[0m [0mprotocol         = "tcp"
+              [32m+[0m [0msecurity_groups  = []
+              [32m+[0m [0mself             = false
+              [32m+[0m [0mto_port          = 443
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0mcidr_blocks      = [
+                  [32m+[0m [0m"0.0.0.0/0",
+                ]
+              [32m+[0m [0mdescription      = ""
+              [32m+[0m [0mfrom_port        = 80
+              [32m+[0m [0mipv6_cidr_blocks = []
+              [32m+[0m [0mprefix_list_ids  = []
+              [32m+[0m [0mprotocol         = "tcp"
+              [32m+[0m [0msecurity_groups  = []
+              [32m+[0m [0mself             = false
+              [32m+[0m [0mto_port          = 80
+            },
+        ]
+      [32m+[0m [0m[1m[0mname[0m[0m                   = "tommytsang-security-group"
+      [32m+[0m [0m[1m[0mname_prefix[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mowner_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrevoke_rules_on_delete[0m[0m = false
+      [32m+[0m [0m[1m[0mtags[0m[0m                   = {
+          [32m+[0m [0m"Name" = "tommytsang-security-group"
+        }
+      [32m+[0m [0m[1m[0mtags_all[0m[0m               = {
+          [32m+[0m [0m"Name" = "tommytsang-security-group"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                 = (known after apply)
+    }
+
+[1m  # aws_subnet.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_subnet" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0massign_ipv6_address_on_creation[0m[0m = false
+      [32m+[0m [0m[1m[0mavailability_zone[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mavailability_zone_id[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                      = "10.0.10.0/24"
+      [32m+[0m [0m[1m[0mid[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block_association_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmap_public_ip_on_launch[0m[0m         = false
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                            = {
+          [32m+[0m [0m"name" = "tommytsang-subnet"
+        }
+      [32m+[0m [0m[1m[0mtags_all[0m[0m                        = {
+          [32m+[0m [0m"name" = "tommytsang-subnet"
+        }
+      [32m+[0m [0m[1m[0mvpc_id[0m[0m                          = (known after apply)
+    }
+
+[1m  # aws_vpc.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "aws_vpc" "hashicat" {
+      [32m+[0m [0m[1m[0marn[0m[0m                              = (known after apply)
+      [32m+[0m [0m[1m[0massign_generated_ipv6_cidr_block[0m[0m = false
+      [32m+[0m [0m[1m[0mcidr_block[0m[0m                       = "10.0.0.0/16"
+      [32m+[0m [0m[1m[0mdefault_network_acl_id[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdefault_route_table_id[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mdefault_security_group_id[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mdhcp_options_id[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0menable_classiclink[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0menable_classiclink_dns_support[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0menable_dns_hostnames[0m[0m             = true
+      [32m+[0m [0m[1m[0menable_dns_support[0m[0m               = true
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0minstance_tenancy[0m[0m                 = "default"
+      [32m+[0m [0m[1m[0mipv6_association_id[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mipv6_cidr_block[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mmain_route_table_id[0m[0m              = (known after apply)
+      [32m+[0m [0m[1m[0mowner_id[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                             = {
+          [32m+[0m [0m"environment" = "Production"
+          [32m+[0m [0m"name"        = "tommytsang-vpc-us-east-1"
+        }
+      [32m+[0m [0m[1m[0mtags_all[0m[0m                         = {
+          [32m+[0m [0m"environment" = "Production"
+          [32m+[0m [0m"name"        = "tommytsang-vpc-us-east-1"
+        }
+    }
+
+[1m  # null_resource.configure-cat-app[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "null_resource" "configure-cat-app" {
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mtriggers[0m[0m = {
+          [32m+[0m [0m"build_number" = (known after apply)
+        }
+    }
+
+[1m  # tls_private_key.hashicat[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "tls_private_key" "hashicat" {
+      [32m+[0m [0m[1m[0malgorithm[0m[0m                     = "ED25519"
+      [32m+[0m [0m[1m[0mecdsa_curve[0m[0m                   = "P224"
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_key_openssh[0m[0m           = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mprivate_key_pem_pkcs8[0m[0m         = (sensitive value)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_md5[0m[0m    = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_fingerprint_sha256[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_openssh[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0mpublic_key_pem[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mrsa_bits[0m[0m                      = 2048
+    }
+
+[0m[1mPlan:[0m 12 to add, 0 to change, 0 to destroy.
+[0m[0m
+[1mChanges to Outputs:[0m[0m
+  [32m+[0m [0m[1m[0mcatapp_ip[0m[0m  = (known after apply)
+  [32m+[0m [0m[1m[0mcatapp_url[0m[0m = (known after apply)
+[0m[1mtls_private_key.hashicat: Creating...[0m[0m
+[0m[1mtls_private_key.hashicat: Creation complete after 0s [id=1590738e43911c3001f2631e9c4c3d32d0dfe353][0m
+[0m[1maws_key_pair.hashicat: Creating...[0m[0m
+[0m[1maws_vpc.hashicat: Creating...[0m[0m
+[0m[1maws_key_pair.hashicat: Creation complete after 1s [id=tommytsang-ssh-key.pem][0m
+[0m[1maws_vpc.hashicat: Still creating... [10s elapsed][0m[0m
+[0m[1maws_vpc.hashicat: Creation complete after 16s [id=vpc-0498c756637ebf28a][0m
+[0m[1maws_security_group.hashicat: Creating...[0m[0m
+[0m[1maws_subnet.hashicat: Creating...[0m[0m
+[0m[1maws_internet_gateway.hashicat: Creating...[0m[0m
+[0m[1maws_subnet.hashicat: Creation complete after 2s [id=subnet-0c829ee01bd09ccf3][0m
+[0m[1maws_internet_gateway.hashicat: Creation complete after 2s [id=igw-001ec525cc86e158e][0m
+[0m[1maws_route_table.hashicat: Creating...[0m[0m
+[0m[1maws_route_table.hashicat: Creation complete after 2s [id=rtb-0e839cbc90f87c641][0m
+[0m[1maws_route_table_association.hashicat: Creating...[0m[0m
+[0m[1maws_route_table_association.hashicat: Creation complete after 1s [id=rtbassoc-02830144e61f29611][0m
+[0m[1maws_security_group.hashicat: Creation complete after 5s [id=sg-05dfee41fcf33f3e9][0m
+[0m[1maws_instance.hashicat: Creating...[0m[0m
+[0m[1maws_instance.hashicat: Still creating... [10s elapsed][0m[0m
+[0m[1maws_instance.hashicat: Still creating... [20s elapsed][0m[0m
+[0m[1maws_instance.hashicat: Still creating... [30s elapsed][0m[0m
+[0m[1maws_instance.hashicat: Creation complete after 36s [id=i-04c3ca15b294ad46a][0m
+[0m[1maws_eip.hashicat: Creating...[0m[0m
+[0m[1maws_eip.hashicat: Creation complete after 2s [id=eipalloc-063278d2b22aa7bd4][0m
+[0m[1maws_eip_association.hashicat: Creating...[0m[0m
+[0m[1maws_eip_association.hashicat: Creation complete after 2s [id=eipassoc-080a657aeabc2862e][0m
+[0m[1mnull_resource.configure-cat-app: Creating...[0m[0m
+[0m[1mnull_resource.configure-cat-app: Provisioning with 'file'...[0m[0m
+[0m[1mnull_resource.configure-cat-app: Still creating... [10s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app: Provisioning with 'remote-exec'...[0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mConnecting to remote host via SSH...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Host: 3.234.194.226
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  User: ubuntu
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Password: false
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Private key: true
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Certificate: false
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  SSH Agent: false
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Checking Host Key: false
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Target Platform: unix
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mConnected!
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Connecting to[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Waiting for h[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Waiting for h[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Waiting for h[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Waiting for h[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [Waiting for h[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [1 InRelease 1[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:2 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1468 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers] [2 Packages 70[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:3 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [253 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1871 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:5 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [317 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:6 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [852 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:7 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [164 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [16.8 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:10 http://security.ubuntu.com/ubuntu jammy-security/multiverse Translation-en [7588 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:11 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [2 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [3 Translation-en store 0 B] [Waitin[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [4 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [4 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Translation-en store 0 B] [Waitin[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [6 Packages store 0 B] [Waiting for [0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [7 Translation-en store 0 B] [Waitin[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [8 Commands-amd64 store 0 B] [Waitin[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [9 Packages store 0 B] [Waiting for [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [10 Translation-en store 0 B] [Waiti[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [11 Commands-amd64 store 0 B] [Waiti[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mHit:12 http://archive.ubuntu.com/ubuntu jammy InRelease
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mErr:12 http://archive.ubuntu.com/ubuntu jammy InRelease
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Waiting for headers][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:13 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [13 InRelease 12.7 kB/119 kB 11%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:14 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [14 InRelease 31.5 kB/109 kB 29%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1681 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages 15.7 kB/1681 kB 1%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:16 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [311 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [16 Translat[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [16.1 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [17 Commands[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:18 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1928 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [18 Packages[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:19 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [327 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [19 Translat[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:20 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [520 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [20 Commands[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:21 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1074 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [21 Packages[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:22 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [246 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [22 Translat[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [22.1 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [23 Commands[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:24 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [42.7 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [24 Packages[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:25 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.4 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [25 Translat[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B] [26 Commands[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m93% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:27 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.1 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m93% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:28 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.0 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:30 http://archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:31 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27.2 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:32 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.2 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m93% [15 Packages store 0 B] [32 Transla[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [644 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:34 http://archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m93% [15 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [16 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [17 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [18 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [19 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [20 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [21 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [22 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [23 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [24 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [25 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [26 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [27 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [28 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [29 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [30 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [31 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [32 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [33 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working]              1764 kB/s 0s[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [34 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working]             1764 kB/s 0s[0m
+[0m[1mnull_resource.configure-cat-app: Still creating... [20s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 11%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 11%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 18%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 18%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 32%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 32%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 48%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 48%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 51%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 52%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 62%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 62%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 68%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 68%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 82%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 82%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 90%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 90%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 96%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 96%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 98%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 98%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[1;33mW: [0mGPG error: http://archive.ubuntu.com/ubuntu jammy InRelease: Splitting up /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_jammy_InRelease into data and signature failed[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[1;31mE: [0mThe repository 'http://archive.ubuntu.com/ubuntu jammy InRelease' is not signed.[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33mN: [0mUpdating from such a repository can't be done securely, and is therefore disabled by default.[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33mN: [0mSee apt-secure(8) manpage for repository creation and user configuration details.[0m
+[0m[1mnull_resource.configure-cat-app: Still creating... [30s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mHit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Connecting to security.ubuntu.com ([0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mHit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [14.1 MB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages 26.6 kB/14.1 MB 0%][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages 11.8 MB/14.1 MB 84%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe Translation-en [5652 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [6 Translation-en 230 kB/5652 kB 4%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [6 Translatio[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 c-n-f Metadata [286 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [7 Commands-a[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [217 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [8 Packages 0[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse Translation-en [112 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [9 Translatio[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/multiverse amd64 c-n-f Metadata [8372 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [10 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1681 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [11 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [11 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [311 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [12 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1928 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [13 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [327 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [14 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1074 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [15 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [246 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [16 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [22.1 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [17 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [42.7 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [18 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.4 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [19 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [20 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.1 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [21 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.0 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [22 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [23 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/restricted amd64 c-n-f Metadata [116 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [24 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27.2 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [25 Packages [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.2 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [26 Translati[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [644 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [27 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports/multiverse amd64 c-n-f Metadata [116 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B] [28 Commands-[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [5 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m94% [5 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [6 Translation-en store 0 B][0m
+[0m[1mnull_resource.configure-cat-app: Still creating... [40s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [6 Translation-en store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [7 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [8 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [9 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [10 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [11 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [12 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [13 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m96% [14 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [15 Packages store 0 B][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [16 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [17 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m97% [18 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [19 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [20 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [21 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [22 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [23 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [24 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [25 Packages store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m99% [26 Translation-en store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [27 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [28 Commands-amd64 store 0 B][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mFetched 26.4 MB in 5s (5611 kB/s)
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 3%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 3%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 55%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 55%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 56%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 56%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 56%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 56%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 56%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 61%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 61%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 64%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 64%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 70%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 70%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 74%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 74%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 77%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 77%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 78%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 79%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 83%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 83%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 86%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 86%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 92%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 92%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 95%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 95%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 98%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 98%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 99%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mAll packages are up to date.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 100%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mThe following additional packages will be installed:
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  apache2-bin apache2-data
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  apache2-utils bzip2 libapr1
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  libaprutil1 libaprutil1-dbd-sqlite3
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  libaprutil1-ldap liblua5.3-0 mailcap
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  mime-support ssl-cert
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mSuggested packages:
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  apache2-doc apache2-suexec-pristine
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  | apache2-suexec-custom www-browser
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  bzip2-doc
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mThe following NEW packages will be installed:
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  apache2 apache2-bin apache2-data
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  apache2-utils bzip2 libapr1
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  libaprutil1 libaprutil1-dbd-sqlite3
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  libaprutil1-ldap liblua5.3-0 mailcap
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  mime-support ssl-cert
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0 upgraded, 13 newly installed, 0 to remove and 0 not upgraded.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNeed to get 2139 kB of archives.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mAfter this operation, 8521 kB of additional disk space will be used.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1 amd64 1.7.0-8ubuntu0.22.04.1 [108 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [1 libapr1 0 B/108 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m6% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4.22.04.2 [92.8 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m6% [2 libaprutil1 0 B/92.8 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m11% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4.22.04.2 [11.3 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m11% [3 libaprutil1-dbd-sqlite3 0 B/11.3[0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m13% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4.22.04.2 [9170 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m13% [4 libaprutil1-ldap 0 B/9170 B 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m14% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m14% [5 liblua5.3-0 0 B/140 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m21% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.9 [1347 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m21% [6 apache2-bin 0 B/1347 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m73% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.9 [165 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m73% [7 apache2-data 0 B/165 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m81% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.9 [88.7 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m81% [8 apache2-utils 0 B/88.7 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m86% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m86% [9 mailcap 0 B/23.8 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m88% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3696 B]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m88% [10 mime-support 0 B/3696 B 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m90% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.9 [97.9 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m90% [11 apache2 0 B/97.9 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m95% [12 bzip2 0 B/34.8 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m98% [13 ssl-cert 0 B/17.4 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mFetched 2139 kB in 0s (23.2 MB/s)
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreconfiguring packages ...
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[0;79r8[1ASelecting previously unselected package libapr1:amd64.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 10%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 15%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 20%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 25%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 30%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 35%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 45%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 55%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 60%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 65%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 70%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 75%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 80%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 85%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 90%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 95%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 100%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 65292 files and directories currently installed.)
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../00-libapr1_1.7.0-8ubuntu0.22.04.1_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  0%][49m[39m [..................] 87[80;0f[42m[30mProgress: [  2%][49m[39m [..................] 8Unpacking libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  4%][49m[39m [..................] 8Selecting previously unselected package libaprutil1:amd64.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../01-libaprutil1_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  6%][49m[39m [#.................] 8Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  8%][49m[39m [#.................] 8Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  9%][49m[39m [#.................] 8Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 11%][49m[39m [##................] 8Selecting previously unselected package libaprutil1-ldap:amd64.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../03-libaprutil1-ldap_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 13%][49m[39m [##................] 8Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 15%][49m[39m [##................] 8Selecting previously unselected package liblua5.3-0:amd64.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../04-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 17%][49m[39m [###...............] 8Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 19%][49m[39m [###...............] 8Selecting previously unselected package apache2-bin.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../05-apache2-bin_2.4.52-1ubuntu4.9_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 21%][49m[39m [###...............] 8Unpacking apache2-bin (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 23%][49m[39m [####..............] 8Selecting previously unselected package apache2-data.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../06-apache2-data_2.4.52-1ubuntu4.9_all.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 25%][49m[39m [####..............] 8Unpacking apache2-data (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 26%][49m[39m [####..............] 8Selecting previously unselected package apache2-utils.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../07-apache2-utils_2.4.52-1ubuntu4.9_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 28%][49m[39m [#####.............] 8Unpacking apache2-utils (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 30%][49m[39m [#####.............] 8Selecting previously unselected package mailcap.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../08-mailcap_3.70+nmu1ubuntu1_all.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 32%][49m[39m [#####.............] 8Unpacking mailcap (3.70+nmu1ubuntu1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 34%][49m[39m [######............] 8Selecting previously unselected package mime-support.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../09-mime-support_3.66_all.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 36%][49m[39m [######............] 8Unpacking mime-support (3.66) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 38%][49m[39m [######............] 8Selecting previously unselected package apache2.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../10-apache2_2.4.52-1ubuntu4.9_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 40%][49m[39m [#######...........] 8Unpacking apache2 (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 42%][49m[39m [#######...........] 8Selecting previously unselected package bzip2.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../11-bzip2_1.0.8-5build1_amd64.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 43%][49m[39m [#######...........] 8Unpacking bzip2 (1.0.8-5build1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 45%][49m[39m [########..........] 8Selecting previously unselected package ssl-cert.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../12-ssl-cert_1.1.2_all.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 47%][49m[39m [########..........] 8Unpacking ssl-cert (1.1.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 49%][49m[39m [########..........] 8Setting up libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 51%][49m[39m [#########.........] 87[80;0f[42m[30mProgress: [ 53%][49m[39m [#########.........] 8Setting up bzip2 (1.0.8-5build1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 55%][49m[39m [#########.........] 87[80;0f[42m[30mProgress: [ 57%][49m[39m [##########........] 8Setting up ssl-cert (1.1.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 58%][49m[39m [##########........] 8
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 60%][49m[39m [##########........] 8Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 62%][49m[39m [###########.......] 87[80;0f[42m[30mProgress: [ 64%][49m[39m [###########.......] 8Setting up apache2-data (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 66%][49m[39m [###########.......] 87[80;0f[42m[30mProgress: [ 68%][49m[39m [############......] 8Setting up mailcap (3.70+nmu1ubuntu1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 70%][49m[39m [############......] 87[80;0f[42m[30mProgress: [ 72%][49m[39m [############......] 8Setting up libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 74%][49m[39m [#############.....] 87[80;0f[42m[30mProgress: [ 75%][49m[39m [#############.....] 8Setting up mime-support (3.66) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 77%][49m[39m [#############.....] 87[80;0f[42m[30mProgress: [ 79%][49m[39m [##############....] 8Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 81%][49m[39m [##############....] 87[80;0f[42m[30mProgress: [ 83%][49m[39m [##############....] 8Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 85%][49m[39m [###############...] 87[80;0f[42m[30mProgress: [ 87%][49m[39m [###############...] 8Setting up apache2-utils (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 89%][49m[39m [###############...] 87[80;0f[42m[30mProgress: [ 91%][49m[39m [################..] 8Setting up apache2-bin (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 92%][49m[39m [################..] 87[80;0f[42m[30mProgress: [ 94%][49m[39m [################..] 8Setting up apache2 (2.4.52-1ubuntu4.9) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 96%][49m[39m [#################.] 8Enabling module mpm_event.
+[0m[1mnull_resource.configure-cat-app: Still creating... [50s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module authz_core.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module authz_host.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module authn_core.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module auth_basic.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module access_compat.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module authn_file.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module authz_user.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module alias.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module dir.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module autoindex.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module env.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module mime.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module negotiation.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module setenvif.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module filter.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module deflate.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module status.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling module reqtimeout.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling conf charset.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling conf localized-error-pages.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling conf other-vhosts-access-log.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling conf security.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling conf serve-cgi-bin.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mEnabling site 000-default.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mCreated symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mCreated symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 98%][49m[39m [#################.] 8Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mProcessing triggers for man-db (2.10.2-1) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mProcessing triggers for libc-bin (2.35-0ubuntu3.7) ...
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[0;80r8[1A[J
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [================]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [====         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [=============]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images...
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mRunning kernel seems to be up-to-date.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo services need to be restarted.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo containers need to be restarted.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo user sessions are running outdated
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m binaries.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo VM guests are running outdated
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m hypervisor (qemu) binaries on this
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m host.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScript complete.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... 100%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading package lists... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mBuilding dependency tree... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... 0%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mReading state information... Done
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mSuggested packages:
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  filters cowsay-off
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mThe following NEW packages will be installed:
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m  cowsay
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNeed to get 18.6 kB of archives.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mAfter this operation, 93.2 kB of additional disk space will be used.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mGet:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy/universe amd64 cowsay all 3.03+dfsg2-8 [18.6 kB]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m0% [1 cowsay 0 B/18.6 kB 0%][0m[33m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m100% [Working][0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mFetched 18.6 kB in 0s (1107 kB/s)
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[0;79r8[1ASelecting previously unselected package cowsay.
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 5%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 10%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 15%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 20%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 25%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 30%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 35%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 40%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 45%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 50%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 55%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 60%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 65%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 70%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 75%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 80%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 85%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 90%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 95%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 100%
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m(Reading database ... 66061 files and directories currently installed.)
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mPreparing to unpack .../cowsay_3.03+dfsg2-8_all.deb ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [  0%][49m[39m [..................] 87[80;0f[42m[30mProgress: [ 20%][49m[39m [###...............] 8Unpacking cowsay (3.03+dfsg2-8) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 40%][49m[39m [#######...........] 8Setting up cowsay (3.03+dfsg2-8) ...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[80;0f[42m[30mProgress: [ 60%][49m[39m [##########........] 87[80;0f[42m[30mProgress: [ 80%][49m[39m [##############....] 8Processing triggers for man-db (2.10.2-1) ...
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m7[0;80r8[1A[J
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [                ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=               ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==              ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [====            ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=====           ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [======          ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=======         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [========        ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=========       ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==========      ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [===========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [============    ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============   ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [==============  ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [=============== ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes... [================]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning processes...
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [             ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [====         ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [========     ]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images... [=============]
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mScanning linux images...
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mRunning kernel seems to be up-to-date.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo services need to be restarted.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo containers need to be restarted.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo user sessions are running outdated
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m binaries.
+
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0mNo VM guests are running outdated
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m hypervisor (qemu) binaries on this
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m host.
+[0m[1mnull_resource.configure-cat-app: Still creating... [1m0s elapsed][0m[0m
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m _______________
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m< Mooooooooooo! >
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m ---------------
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m        \   ^__^
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m         \  (oo)\_______
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m            (__)\       )\/\
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m                ||----w |
+[0m[1mnull_resource.configure-cat-app (remote-exec):[0m [0m                ||     ||
+[0m[1mnull_resource.configure-cat-app: Creation complete after 1m1s [id=3981548773012124150][0m
+[0m[1m[32m
+Apply complete! Resources: 12 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mcatapp_ip = "http://3.234.194.226"
+catapp_url = "http://ec2-3-234-194-226.compute-1.amazonaws.com"
